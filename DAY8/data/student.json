@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "first_name": "Demetris",
+        "gender": "Male",
+        "City": "Gading"
+    },
+    {
+        "id": 2,
+        "first_name": "Terrance",
+        "gender": "Male",
+        "City": "Shuiquan"
+    },
+    {
+        "id": 3,
+        "first_name": "Emilie",
+        "gender": "Polygender",
+        "City": "Cubará"
+    },
+    {
+        "id": 4,
+        "first_name": "Rodrick",
+        "gender": "Male",
+        "City": "Seattle"
+    },
+    {
+        "id": 5,
+        "first_name": "Kippie",
+        "gender": "Female",
+        "City": "Doctor Juan León Mallorquín"
+    },
+    {
+        "id": 6,
+        "first_name": "Tanya",
+        "gender": "Non-binary",
+        "City": "Zama"
+    },
+    {
+        "id": 7,
+        "first_name": "Blaine",
+        "gender": "Male",
+        "City": "Bamenda"
+    },
+    {
+        "id": 8,
+        "first_name": "Salomo",
+        "gender": "Male",
+        "City": "Zavolzh’ye"
+    },
+    {
+        "id": 9,
+        "first_name": "Pavel",
+        "gender": "Male",
+        "City": "Jimeta"
+    },
+    {
+        "id": 10,
+        "first_name": "Emilio",
+        "gender": "Male",
+        "City": "Basing"
+    }
+]
