@@ -42,12 +42,6 @@
         "City": "Bamenda"
     },
     {
-        "id": 8,
-        "first_name": "Salomo",
-        "gender": "Male",
-        "City": "Zavolzh’ye"
-    },
-    {
         "id": 9,
         "first_name": "Pavel",
         "gender": "Male",
@@ -58,5 +52,12 @@
         "first_name": "Emilio",
         "gender": "Male",
         "City": "Basing"
+    },
+    {
+        "id": 11,
+        "first_name": "Group58",
+        "gender": "Male",
+        "City": "Basing",
+        "age": 20
     }
 ]
