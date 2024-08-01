@@ -1,0 +1,17 @@
+1. Array:
+powers:["money","Thunder"]
+synatx:
+'powers.1'
+
+Array of object:
+villains:[
+
+    {name:'anbc',address:'jkl'},
+    {name:'ac',address:'kl'},
+]
+synatx:
+ 'villains.0.address'
+
+object:
+metadata:{favouriteColor:'red' health:90}
+synatx 'metadata.favouriteColor'
