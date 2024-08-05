@@ -15,3 +15,11 @@ synatx:
 object:
 metadata:{favouriteColor:'red' health:90}
 synatx 'metadata.favouriteColor'
+
+
+
+updateOne({cond},{$set:{health:90}     })
+
+
+updateOne({_id: ObjectId('66ab941a331a285afef51bb0')},{$set:{'villains.0.name':'One Face'}} })
+
