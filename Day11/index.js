@@ -1,5 +1,5 @@
 const express = require('express')
-const { main, StudentModel } = require('./con')
+const { main, StudentModel } = require('./db')
 const app = express();
 
 //middlware
