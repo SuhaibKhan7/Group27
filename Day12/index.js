@@ -1,6 +1,8 @@
 const express = require('express')
 const main = require('./db');
 const studentRouter = require('./routes/student.routes');
+require('dotenv').config()
+const port = process.env.PORT
 const app = express();
 
 app.use(express.json())
@@ -11,7 +13,7 @@ app.get('/', (req, res) => {
     res.send('This is Home Page')
 })
 
-app.listen(4000, async () => {
+app.listen(port, async () => {
     await main();
     console.log('server Started')
 })
