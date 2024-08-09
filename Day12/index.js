@@ -3,13 +3,13 @@ const main = require('./db');
 const studentRouter = require('./routes/student.routes');
 const app = express();
 
+app.use(express.json())
+
 app.use('/student', studentRouter)
 
 app.get('/', (req, res) => {
     res.send('This is Home Page')
 })
-
-
 
 app.listen(4000, async () => {
     await main();

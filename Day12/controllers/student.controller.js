@@ -1,21 +1,28 @@
-const createStudent = (req, res) => {
+const express = require('express')
+const StudentModel = require("../models/model.student");
 
+const createStudent = async (req, res) => {
+    const payload = req.body;
+    console.log(payload)
+    const data = new StudentModel(payload)
+    await data.save();
+    res.send('Data saved')
+}
+const getSingleStudent = async (req, res) => {
+
+    res.send('list of single student')
 
 }
-const getSingleStudent = (req, res) => {
-    //single student
+const getAllStudents = async (req, res) => {
+    res.send('List of all students')
 
 }
-const getAllStudents = (req, res) => {
-    //all student
+const updateStudent = async (req, res) => {
+    res.send('Data updated')
 
 }
-const updateStudent = (req, res) => {
-
-
-}
-const deleteStudent = (req, res) => {
-
+const deleteStudent = async (req, res) => {
+    res.send('data Deleted')
 
 }
 

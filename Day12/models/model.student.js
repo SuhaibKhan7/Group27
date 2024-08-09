@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const studentSchema = mongoose.Schema({
     rollno: {
-        type: String,
-        required: true
+        type: String
+       
     },
     name: String,
     email: String
