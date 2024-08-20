@@ -1,16 +1,20 @@
+const { jwtGenerate } = require("../middlewares/jwt");
 const SignupModel = require("../models/user.singupModel");
 const bcrypt = require('bcrypt')
 const userLogin = async (req, res) => {
     const { email, pass } = req.body;
     console.log(req.body)
-    const user = await SignupModel.findOne({ email: email })
+    const user = await SignupModel.find({ email: email })
     if (user.length > 0) {
-        bcrypt.compare(pass, user.pass, function (err, result) {
+        bcrypt.compare(pass, user[0].pass, function (err, result) {
             if (err) {
                 res.send({ message: "Hash not generated", error: err })
             }
-            if (result) {
-                res.send("Login Successfull")
+            else if (result) {
+                //generate Token
+                const token = jwtGenerate(user[0].name)
+                console.log(token)
+                res.send({ message: "Login Sucessfull", token: token })
             }
             else {
                 res.send("Login failed")
