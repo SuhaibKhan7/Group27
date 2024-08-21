@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt')
 const SignupModel = require('../models/user.singupModel');
 const createUser = async (req, res) => {
+    console.log(req.headers);
     console.log(req.body)
     const { name, pass, cpass, email } = req.body;
     if (pass != cpass) {

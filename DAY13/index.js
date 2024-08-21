@@ -5,7 +5,10 @@ const { loginRouter } = require('./routes/user.loginRouter');
 const { profileRouter } = require('./routes/user.profileRouter');
 const app = express();
 
-app.use(express.json())
+// app.use(express.json())
+
+app.use(express.urlencoded({ extended: true }))
+
 app.use('/signup', singupRouter)
 app.use('/login', loginRouter)
 app.use('/profile', profileRouter)
