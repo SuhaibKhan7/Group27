@@ -14,14 +14,27 @@ const createUser = async (req, res) => {
         }
         else {
             console.log(hash)
-            const user = new SignupModel({ name: name, pass: hash, email: email })
-        try {
-            await user.save();
-            res.send('Data Received succesful')
-        } catch (error) {
-            console.log(error)
+            const user = new SignupModel({
+                name: name,
+                pass: hash,
+                email: email,
+                profileImage: {
+                    filename: req.file.filename,
+                    path: req.file.path,
+                    size: req.file.size,
+                    mimetype: req.file.mimetype
+                }
+
+
+
+            })
+            try {
+                await user.save();
+                res.send('Data Received succesful')
+            } catch (error) {
+                console.log(error)
+            }
         }
-    }
     });
 
 
