@@ -11,7 +11,12 @@ const signupSchema = mongoose.Schema({
     },
     cpass: {
         type: String,
-        require: true
+        require: true,
+        validate: {
+            validator: function (value) {
+                return this.pass = cpass
+            }
+        }
     },
     email: {
         type: String,
