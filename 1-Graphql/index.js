@@ -11,23 +11,23 @@ const resolvers = {
     reviews() {
       return db.reviews;
     },
-    user(_, { id }) {
-      return db.users[id];
+    products() {
+      return db.products;
     },
-    async posts() {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      const data = await response.json();
-      return data;
+  },
+  User: {
+    reviews(parent) {
+      return db.reviews.filter((review) => review.reviewid === parent.id);
     },
-
-    async post(_, { id }) {
-      const response = await fetch(
-        `https://jsonplaceholder.typicode.com/posts${id}`
+  },
+  Product: {
+    seller(parent) {
+      return db.users.find((user) => user.id === parent.sellerid);
+    },
+    reviews(parent) {
+      return db.reviews.filter((review) =>
+        parent.reviewsid.includes(review.id)
       );
-      const data = await response.json();
-      return data;
     },
   },
 };
