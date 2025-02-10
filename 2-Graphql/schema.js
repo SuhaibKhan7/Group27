@@ -3,23 +3,28 @@ type User{
 id:ID!
 name:String!
 email:String!
+reviews:[Review]
 },
 type Review{
 id:ID!
 rating:Int!
 context:String!
+user:User
 },
-type Post{
+type Product{
     id:ID!
-    title:String
-    body:String
+    name:String!
+    price:Float!
+    reviews:[Review]
+    seller:User
 }
+
 type Query{
 users:[User]
 reviews:[Review]
-user(id:ID):User
-posts:[Post]
-post(id:ID):Post
+products:[Product]
+
+
 }
 
 

@@ -5,8 +5,31 @@ import db from "./db.js";
 
 const resolvers = {
   Query: {
-    
-  }
+    users() {
+      return db.users;
+    },
+    reviews() {
+      return db.reviews;
+    },
+    products() {
+      return db.products;
+    },
+  },
+  User: {
+    reviews(parent) {
+      return db.reviews.filter((review) => review.reviewid === parent.id);
+    },
+  },
+  Product: {
+    seller(parent) {
+      return db.users.find((user) => user.id === parent.sellerid);
+    },
+    reviews(parent) {
+      return db.reviews.filter((review) =>
+        parent.reviewsid.includes(review.id)
+      );
+    },
+  },
 };
 
 const server = new ApolloServer({
