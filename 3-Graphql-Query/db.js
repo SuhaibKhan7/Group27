@@ -44,7 +44,6 @@ const Products = [
     category: "Clothes",
     sellerId: 2,
     size: "M",
-    downloadLink: "https://example.com/download/software1",
     __typename: "Clothes",
     length: 1000,
   },
